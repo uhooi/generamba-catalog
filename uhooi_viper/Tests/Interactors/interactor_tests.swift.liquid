@@ -1,13 +1,13 @@
 //
-//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
-//  {{ module_info.project_name }}
+//  {{ module_info.file_name }}
+//  {{ module_info.test_targets }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 import XCTest
-@testable import {{ module_info.name }}
+@testable import {{ module_info.test_targets }}
 
 final class {{ module_info.name }}InteractorTests: XCTestCase {
 
@@ -27,4 +27,3 @@ final class {{ module_info.name }}InteractorTests: XCTestCase {
     // MARK: - Test Methods
 
 }
-
