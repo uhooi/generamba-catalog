@@ -16,7 +16,13 @@ final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
 
     // MARK: Stored Instance Properties
 
-    weak var viewController: {{ module_info.name }}ViewController!
+    private unowned let viewController: {{ module_info.name }}ViewController
+
+    // MARK: Initializers
+
+    private init(viewController: {{ module_info.name }}ViewController) {
+        self.viewController = viewController
+    }
 
     // MARK: Type Methods
 
@@ -25,12 +31,11 @@ final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
             fatalError("Fail to load {{ module_info.name }}ViewController from Storyboard.")
         }
         let interactor = {{ module_info.name }}Interactor()
-        let router = {{ module_info.name }}Router()
+        let router = {{ module_info.name }}Router(viewController: view)
         let presenter = {{ module_info.name }}Presenter(view: view, interactor: interactor, router: router)
 
         view.presenter = presenter
         interactor.presenter = presenter
-        router.viewController = view
 
         return view
     }
