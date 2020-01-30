@@ -9,19 +9,19 @@
 import XCTest
 @testable import {{ module_info.project_targets }}
 
-final class {{ module_info.name }}PresenterTest: XCTestCase {
+final class {{ module_info.name }}PresenterTests: XCTestCase {
 
     var viewMock = {{ module_info.name }}UserInterfaceMock()
     var interactorMock = {{ module_info.name }}InteractorInputMock()
-    var routerMock = {{ module_info.name }}RouterMock()
+    var routerMock = {{ module_info.name }}RouterInputMock()
     var presenter = {{ module_info.name }}Presenter(view: {{ module_info.name }}UserInterfaceMock(),
                                                     interactor: {{ module_info.name }}InteractorInputMock(),
-                                                    router: {{ module_info.name }}RouterMock())
+                                                    router: {{ module_info.name }}RouterInputMock())
 
     override func setUp() {
         self.viewMock = {{ module_info.name }}UserInterfaceMock()
         self.interactorMock = {{ module_info.name }}InteractorInputMock()
-        self.routerMock = {{ module_info.name }}RouterMock()
+        self.routerMock = {{ module_info.name }}RouterInputMock()
         self.presenter = {{ module_info.name }}Presenter(view:self.viewMock,
                                                          interactor: self.interactorMock,
                                                          router: self.routerMock)
