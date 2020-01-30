@@ -1,0 +1,30 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import XCTest
+@testable import {{ module_info.name }}
+
+final class {{ module_info.name }}InteractorTests: XCTestCase {
+
+    var presenterMock = {{ module_info.name }}InteractorOutputMock()
+    var interactor = {{ module_info.name }}Interactor()
+
+    override func setUp() {
+        self.presenterMock = {{ module_info.name }}InteractorOutputMock()
+        self.interactor = {{ module_info.name }}Interactor()
+        self.interactor.presenter = self.presenterMock
+    }
+
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    // MARK: - Test Methods
+
+}
+

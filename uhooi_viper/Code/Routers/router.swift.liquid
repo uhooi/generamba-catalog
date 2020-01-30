@@ -1,0 +1,43 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+/// @mockable
+protocol {{ module_info.name }}RouterInput: AnyObject {
+}
+
+final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+
+    // MARK: Stored Instance Properties
+
+    weak var viewController: {{ module_info.name }}ViewController!
+
+    // MARK: Type Methods
+
+    static func assembleModule() -> {{ module_info.name }}ViewController {
+        guard let view = R.storyboard.{{ module_info.name }}.instantiateInitialViewController() else {
+            fatalError("Fail to load {{ module_info.name }}ViewController from Storyboard.")
+        }
+        let interactor = {{ module_info.name }}Interactor()
+        let router = {{ module_info.name }}Router()
+        let presenter = {{ module_info.name }}Presenter(view: view, interactor: interactor, router: router)
+
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+
+        return view
+    }
+
+    // MARK: {{ module_info.name }}RouterInput
+
+    // MARK: Other Private Methods
+
+}
+

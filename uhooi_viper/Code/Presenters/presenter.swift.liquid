@@ -1,0 +1,49 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+protocol {{ module_info.name }}EventHandler: AnyObject {
+    func viewDidLoad()
+}
+
+/// @mockable
+protocol {{ module_info.name }}InteractorOutput: AnyObject {
+}
+
+final class {{ module_info.name }}Presenter: {{ module_info.name }}EventHandler, {{ module_info.name }}InteractorOutput {
+
+    // MARK: Type Aliases
+
+    // MARK: Stored Instance Properties
+
+    private weak var view: {{ module_info.name }}UserInterface!
+    private let interactor: {{ module_info.name }}InteractorInput
+    private let router: {{ module_info.name }}RouterInput
+
+    // MARK: Computed Instance Properties
+
+    // MARK: Initializers
+
+    init(view: {{ module_info.name }}UserInterface, interactor: {{ module_info.name }}InteractorInput, router: {{ module_info.name }}RouterInput) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
+
+    // MARK: {{ module_info.name }}EventHandler
+
+    func viewDidLoad() {
+    }
+
+    // MARK: {{ module_info.name }}InteractorOutput
+
+    // MARK: Other Private Methods
+
+}
+

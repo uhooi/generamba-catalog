@@ -1,0 +1,35 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+/// @mockable
+protocol {{ module_info.name }}InteractorInput: AnyObject {
+}
+
+final class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
+
+    // MARK: Type Aliases
+
+    // MARK: Stored Instance Properties
+
+    weak var presenter: {{ module_info.name }}InteractorOutput!
+
+    // MARK: Computed Instance Properties
+
+    // MARK: Initializer
+
+    init() {
+    }
+
+    // MARK: {{ module_info.name }}InteractorInput
+
+    // MARK: Other Private Methods
+
+}
+

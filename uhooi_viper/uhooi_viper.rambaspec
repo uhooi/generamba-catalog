@@ -1,0 +1,23 @@
+# Template information section
+name: uhooi_viper
+summary: Swift VIPER module template created by uhooi.
+author: uhooi
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+- {name: Views/ViewController.swift, path: Code/Views/viewcontroller.swift.liquid}
+- {name: Presenters/Presenter.swift, path: Code/Presenters/presenter.swift.liquid}
+- {name: Interactors/Interactor.swift, path: Code/Interactors/interactor.swift.liquid}
+- {name: Routers/Router.swift, path: Code/Routers/router.swift.liquid}
+
+# The declarations for test files
+test_files:
+- {name: TestCases/Presenters/PresenterTests.swift, path: Tests/Presenters/presenter_tests.swift.liquid}
+- {name: TestCases/Interactors/InteractorTests.swift, path: Tests/Interactors/interactor_tests.swift.liquid}
+
+# Template dependencies
+dependencies:
+- R.swift
+- Mockolo
