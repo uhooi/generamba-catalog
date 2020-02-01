@@ -19,9 +19,7 @@ final class {{ module_info.name }}InteractorTests: XCTestCase {
     // MARK: TestCase Life-Cycle Methods
 
     override func setUp() {
-        self.presenterMock = {{ module_info.name }}InteractorOutputMock()
-        self.interactor = {{ module_info.name }}Interactor()
-        self.interactor.presenter = self.presenterMock
+        reset()
     }
 
     override func tearDown() {
@@ -29,5 +27,13 @@ final class {{ module_info.name }}InteractorTests: XCTestCase {
     }
 
     // MARK: - Test Methods
+
+    // MARK: - Other Private Methods
+
+    private func reset() {
+        self.presenterMock = {{ module_info.name }}InteractorOutputMock()
+        self.interactor = {{ module_info.name }}Interactor()
+        self.interactor.presenter = self.presenterMock
+    }
 
 }

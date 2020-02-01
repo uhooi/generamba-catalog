@@ -21,12 +21,7 @@ final class {{ module_info.name }}PresenterTests: XCTestCase {
     // MARK: TestCase Life-Cycle Methods
 
     override func setUp() {
-        self.viewMock = {{ module_info.name }}UserInterfaceMock()
-        self.interactorMock = {{ module_info.name }}InteractorInputMock()
-        self.routerMock = {{ module_info.name }}RouterInputMock()
-        self.presenter = {{ module_info.name }}Presenter(view:self.viewMock,
-                                                         interactor: self.interactorMock,
-                                                         router: self.routerMock)
+        reset()
     }
 
     override func tearDown() {
@@ -41,6 +36,17 @@ final class {{ module_info.name }}PresenterTests: XCTestCase {
         self.presenter.viewDidLoad()
 
         // TODO: Assert
+    }
+
+    // MARK: - Other Private Methods
+
+    private func reset() {
+        self.viewMock = {{ module_info.name }}UserInterfaceMock()
+        self.interactorMock = {{ module_info.name }}InteractorInputMock()
+        self.routerMock = {{ module_info.name }}RouterInputMock()
+        self.presenter = {{ module_info.name }}Presenter(view:self.viewMock,
+                                                         interactor: self.interactorMock,
+                                                         router: self.routerMock)
     }
 
 }
