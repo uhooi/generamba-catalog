@@ -11,8 +11,12 @@ import XCTest
 
 final class {{ module_info.name }}InteractorTests: XCTestCase {
 
-    var presenterMock = {{ module_info.name }}InteractorOutputMock()
-    var interactor = {{ module_info.name }}Interactor()
+    // MARK: Stored Instance Properties
+
+    private var presenterMock: {{ module_info.name }}InteractorOutputMock!
+    private var interactor: {{ module_info.name }}Interactor!
+
+    // MARK: TestCase Life-Cycle Methods
 
     override func setUp() {
         self.presenterMock = {{ module_info.name }}InteractorOutputMock()

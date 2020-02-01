@@ -11,12 +11,14 @@ import XCTest
 
 final class {{ module_info.name }}PresenterTests: XCTestCase {
 
-    var viewMock = {{ module_info.name }}UserInterfaceMock()
-    var interactorMock = {{ module_info.name }}InteractorInputMock()
-    var routerMock = {{ module_info.name }}RouterInputMock()
-    var presenter = {{ module_info.name }}Presenter(view: {{ module_info.name }}UserInterfaceMock(),
-                                                    interactor: {{ module_info.name }}InteractorInputMock(),
-                                                    router: {{ module_info.name }}RouterInputMock())
+    // MARK: Stored Instance Properties
+
+    private var viewMock: {{ module_info.name }}UserInterfaceMock!
+    private var interactorMock: {{ module_info.name }}InteractorInputMock!
+    private var routerMock: {{ module_info.name }}RouterInputMock!
+    private var presenter: {{ module_info.name }}Presenter!
+
+    // MARK: TestCase Life-Cycle Methods
 
     override func setUp() {
         self.viewMock = {{ module_info.name }}UserInterfaceMock()
