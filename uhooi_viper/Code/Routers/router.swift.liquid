@@ -27,6 +27,8 @@ final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
     // MARK: Type Methods
 
     static func assembleModule() -> {{ module_info.name }}ViewController {
+        // TODO: Create a Storyboard with the same name as "{{ module_info.name }}".
+        // TODO: And Change "{{ module_info.name }}" of "R.storyboard.{{ module_info.name }}" to lowercase.
         guard let view = R.storyboard.{{ module_info.name }}.instantiateInitialViewController() else {
             fatalError("Fail to load {{ module_info.name }}ViewController from Storyboard.")
         }
