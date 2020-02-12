@@ -14,8 +14,8 @@ code_files:
 
 # The declarations for test files
 test_files:
-- {name: TestCases/Presenters/PresenterTests.swift, path: Tests/Presenters/presenter_tests.swift.liquid}
-- {name: TestCases/Interactors/InteractorTests.swift, path: Tests/Interactors/interactor_tests.swift.liquid}
+- {name: Presenters/PresenterTests.swift, path: Tests/Presenters/presenter_tests.swift.liquid}
+- {name: Interactors/InteractorTests.swift, path: Tests/Interactors/interactor_tests.swift.liquid}
 
 # Template dependencies
 dependencies:
