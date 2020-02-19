@@ -16,7 +16,7 @@ protocol {{ module_info.name }}EventHandler: AnyObject {
 protocol {{ module_info.name }}InteractorOutput: AnyObject {
 }
 
-final class {{ module_info.name }}Presenter: {{ module_info.name }}EventHandler, {{ module_info.name }}InteractorOutput {
+final class {{ module_info.name }}Presenter {
 
     // MARK: Type Aliases
 
@@ -36,13 +36,16 @@ final class {{ module_info.name }}Presenter: {{ module_info.name }}EventHandler,
         self.router = router
     }
 
-    // MARK: {{ module_info.name }}EventHandler
+    // MARK: Other Private Methods
+
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}EventHandler {
 
     func viewDidLoad() {
     }
 
-    // MARK: {{ module_info.name }}InteractorOutput
+}
 
-    // MARK: Other Private Methods
-
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {
 }

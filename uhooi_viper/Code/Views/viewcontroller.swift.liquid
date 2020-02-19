@@ -12,7 +12,7 @@ import UIKit
 protocol {{ module_info.name }}UserInterface: AnyObject {
 }
 
-final class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}UserInterface {
+final class {{ module_info.name }}ViewController: UIViewController {
 
     // MARK: Type Aliases
 
@@ -34,11 +34,12 @@ final class {{ module_info.name }}ViewController: UIViewController, {{module_inf
 
     // MARK: IBActions
 
-    // MARK: {{module_info.name}}UserInterface
-
     // MARK: Other Private Methods
 
     private func configureView() {
     }
 
+}
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}UserInterface {
 }

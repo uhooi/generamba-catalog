@@ -12,7 +12,7 @@ import UIKit
 protocol {{ module_info.name }}RouterInput: AnyObject {
 }
 
-final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+final class {{ module_info.name }}Router {
 
     // MARK: Stored Instance Properties
 
@@ -42,8 +42,9 @@ final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
         return view
     }
 
-    // MARK: {{ module_info.name }}RouterInput
-
     // MARK: Other Private Methods
 
+}
+
+extension {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
 }

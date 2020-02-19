@@ -12,7 +12,7 @@ import Foundation
 protocol {{ module_info.name }}InteractorInput: AnyObject {
 }
 
-final class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
+final class {{ module_info.name }}Interactor {
 
     // MARK: Type Aliases
 
@@ -27,8 +27,9 @@ final class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorIn
     init() {
     }
 
-    // MARK: {{ module_info.name }}InteractorInput
-
     // MARK: Other Private Methods
 
+}
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
 }
