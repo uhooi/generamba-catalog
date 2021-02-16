@@ -28,7 +28,9 @@ final class {{ module_info.name }}Router {
 
     static func assembleModule() -> {{ module_info.name }}ViewController {
         // TODO: Create a Storyboard with the same name as "{{ module_info.name }}".
-        // TODO: And Change "{{ module_info.name }}" of "R.storyboard.{{ module_info.name }}" to lowercase.
+        // TODO: Specify "{{ module_info.name }}ViewController" for Custom Class in Storyboard.
+        // TODO: Turn on the "Is Initial View Controller" checkbox in Storyboard.
+        // TODO: Change "{{ module_info.name }}" of "R.storyboard.{{ module_info.name }}" to lowercase.
         guard let view = R.storyboard.{{ module_info.name }}.instantiateInitialViewController() else {
             fatalError("Fail to load {{ module_info.name }}ViewController from Storyboard.")
         }
