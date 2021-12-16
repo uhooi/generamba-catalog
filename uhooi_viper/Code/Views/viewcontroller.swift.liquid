@@ -18,7 +18,7 @@ final class {{ module_info.name }}ViewController: UIViewController {
 
     // MARK: Stored Instance Properties
 
-    var presenter: {{ module_info.name }}EventHandler!
+    private var presenter: {{ module_info.name }}EventHandler!
 
     // MARK: Computed Instance Properties
 
@@ -34,6 +34,12 @@ final class {{ module_info.name }}ViewController: UIViewController {
     }
 
     // MARK: IBActions
+
+    // MARK: Other Internal Methods
+
+    func inject(presenter: {{ module_info.name }}EventHandler) {
+        self.presenter = presenter
+    }
 
     // MARK: Other Private Methods
 
