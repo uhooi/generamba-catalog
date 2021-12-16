@@ -6,13 +6,13 @@ It's a shared catalog of templates for [Generamba](https://github.com/strongself
 
 1. Add templates to `Rambafile` .
 
-```yaml:Rambafile
-### Templates
-catalogs:
-- 'https://github.com/uhooi/generamba-catalog'
-templates:
-- {name: uhooi_viper}
-```
+    ```yaml:Rambafile
+    ### Templates
+    catalogs:
+    - 'https://github.com/uhooi/generamba-catalog'
+    templates:
+    - {name: uhooi_viper}
+    ```
 
 2. Run `generamba template install` .
 
