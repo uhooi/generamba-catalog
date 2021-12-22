@@ -35,7 +35,7 @@ final class {{ module_info.name }}PresenterTests: XCTestCase {
     // MARK: viewDidLoad()
 
     func test_viewDidLoad() {
-        self.presenter.viewDidLoad()
+        presenter.viewDidLoad()
 
         // TODO: Assert
     }
@@ -48,7 +48,11 @@ final class {{ module_info.name }}PresenterTests: XCTestCase {
         self.viewMock = {{ module_info.name }}UserInterfaceMock()
         self.interactorMock = {{ module_info.name }}InteractorInputMock()
         self.routerMock = {{ module_info.name }}RouterInputMock()
-        self.presenter = {{ module_info.name }}Presenter(view: self.viewMock, interactor: self.interactorMock, router: self.routerMock)
+        self.presenter = {{ module_info.name }}Presenter(
+            view: self.viewMock,
+            interactor: self.interactorMock,
+            router: self.routerMock
+        )
     }
 
 }
