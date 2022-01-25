@@ -16,13 +16,19 @@ final class {{ module_info.name }}Interactor {
 
     // MARK: Stored Instance Properties
 
-    weak var presenter: {{ module_info.name }}InteractorOutput!
+    private weak var presenter: {{ module_info.name }}InteractorOutput!
 
     // MARK: Computed Instance Properties
 
     // MARK: Initializer
 
     init() {
+    }
+
+    // MARK: Other Internal Methods
+
+    func inject(presenter: {{ module_info.name }}InteractorOutput) {
+        self.presenter = presenter
     }
 
     // MARK: Other Private Methods
