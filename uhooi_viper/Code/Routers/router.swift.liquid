@@ -39,7 +39,7 @@ final class {{ module_info.name }}Router {
         let presenter = {{ module_info.name }}Presenter(view: view, interactor: interactor, router: router)
 
         view.inject(presenter: presenter)
-        interactor.presenter = presenter
+        interactor.inject(presenter: presenter)
 
         return view
     }
