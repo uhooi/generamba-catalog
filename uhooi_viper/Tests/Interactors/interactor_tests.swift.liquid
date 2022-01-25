@@ -35,7 +35,7 @@ final class {{ module_info.name }}InteractorTests: XCTestCase {
     private func reset() {
         self.presenterMock = {{ module_info.name }}InteractorOutputMock()
         self.interactor = {{ module_info.name }}Interactor()
-        self.interactor.presenter = self.presenterMock
+        self.interactor.inject(presenter: self.presenterMock)
     }
 
 }
